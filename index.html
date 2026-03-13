@@ -646,56 +646,9 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:20px;height:20px;b
    ═══════════════════════════════════════════════════════════════════════════ */
 const CLIENT = {
 
-  /* ── Identity ────────────────────────────────────────────────────────── */
-  name: "Heaven Hill Brands",
-  sub:  "Kentucky Distillers Since 1935",
+  name: "Proximo",
+  atlasDesc: "Bluetooth beacons in your displays ping phones and VIP's fleet network in real time. Watch a Proximo display travel from production through the VIP hub, to retail floor — every step tracked.",
 
-  /* ── Logo
-     Option A: set logoImg to a full <img ...> HTML string (base64 or URL).
-     Option B: leave logoImg as "" to auto-build an initials emblem below.   */
-  logoImg: `<img src="data:image/png;base64,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" alt="Heaven Hill Brands" style="height:80px;width:auto;display:block;margin:0 auto">`,
-
-  /* ── Emblem (only used when logoImg is "") ───────────────────────────── */
-  emblemInitials:  "HH",
-  emblemColor1:    "#8B0000",
-  emblemColor2:    "#C41E3A",
-  emblemShadow:    "rgba(139,0,0,.4)",
-  emblemTextColor: "#FFD700",
-
-  /* ── AI Tools → Atlas ────────────────────────────────────────────────── */
-  atlasUrl:  "https://brandappheavenhill-dyk2gen9apqrdbyqxwsdcp.streamlit.app/",
-  atlasDesc: "Bluetooth beacons in your displays ping phones and VIP's fleet network in real time. Watch a Heaven Hill display travel from production through the VIP hub, to retail floor — every step tracked.",
-
-  /* ── Email CTA subjects ──────────────────────────────────────────────── */
-  emailDemo:  "brandhub Demo Request",
-  emailRoi:   "brandhub ROI Model Request",
-  emailPilot: "brandhub Pilot Program",
-
-  /* ── Competitor label in comparison tables ───────────────────────────── */
-  competitor: "HH Global / Halo",
-
-  /* ── Hero sidebar: Your Top Priorities
-     Each item: { icon, title, links: [{ href, label }] }                  */
-  priorities: [
-    {
-      icon: "💵", title: "Cost Optimization",
-      links: [
-        { href: "#case-studies", label: "48% more product delivered for the same budget →" }
-      ]
-    },
-    {
-      icon: "📦", title: "Inventory Reduction",
-      links: [
-        { href: "#case-studies", label: "33% cost savings on same product in 6 months →" }
-      ]
-    },
-    {
-      icon: "👁️", title: "Enhanced Visibility",
-      links: [
-        { href: "#case-studies", label: "15% storage reduction + 99.7% on-time delivery →" }
-      ]
-    }
-  ]
 };
 /* ═══════════════════════════════════════════════════════════════════════════
    END CLIENT CONFIG
